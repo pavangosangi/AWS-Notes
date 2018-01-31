@@ -1,0 +1,314 @@
+AWS Notes: 
+
+All AWS Services 
+
+AWS Global Infrastructure : 
+
+what is region? what is an AZ?
+A region is a geograpical area, Each region consists of 2(or more) available zones.
+An available zone(AZ) is simply a Data center.
+
+what is an edge location?
+Edge location are endpoints for AWS which are used for caching content, typically this 
+consists of cloudfront, amazon's content delivery network(CDN).
+There are many more edge locations than regions, current there are over 96 edge locations
+
+Difference between a region, availabilty zone and an edge location:
+	-A region is a physical location in the world which consists of two or more available zones
+	-An AZ is one ore more discrete data centers, each with redundant power, networking
+	and connectivity, housed in separate facilities.
+	-Edge locations are endpoints for AWS which are used for caching content, Typically this 
+	consists of CloudFront, Amanzons content delivery Network(CDN).
+
+Compute: 
+
+	EC2 - Elastic Compute Cloud (cloud compute)
+		These are Vitrual machines inside AWS platform, Pyhsical dedicated machines can be there
+	EC2 Container Services
+		To run and maintain docker contains at scale
+	Elastic Beanstalk
+		For developers who dont understand AWS, just to upload their code.
+	Lambda
+		Code upload to cloud, control when executes, dont need to worry about underlaying machines. Example when people upload an image
+		to website and we want to place text on top, create lambda function to place text, and trigger is when the photo is uploaded.
+	Lightsail
+		Amazon VPS (Virtual Private Service) service, provision the server provides fixed ip address that we can login to the server from, rdpx for windows and ssh access for linux and also gives management console.
+	Batch
+		To run the batch computing.
+Storage :
+	
+	S3 - Simple Storage Services(Oldest storage service)
+		Basically we upload the data into buckets in the cloud. offers durable avaialble storage for flat files
+	EFS - Elastic file System
+		Network attached storage so we can store files on efs volume and mount that to multiple virtual machines.
+	Glacier 
+		Data archieval, to archieve data to check it for year or so and its very cheap
+	Snowball
+		A way to bring in alarge amount of data into cloud. 
+	Storage Gateway
+		esentially virtual machines install in data center or data headoffice and replicate information back to S3.
+Databases:
+	
+	RDS - Relational Database Service
+		MySQL, Microsoft sql, postgre, aroura (amazon version of mysql), oracle etc..,
+	DynamoDB 
+		Non-relation databases.
+	Elasticache
+		a way of caching commonly queried from database. For example top 10 products better to use elasticache rather than calling services every time.		
+	Red Shift
+		is for data warehousing or business intellegence for complex queries, like business needs some profit and loss in a region.
+	
+Migration:
+	
+	AWS Migration Hub
+		Tracking service, to track the application when they are migrated AWS and integrate with other services within migration framework.
+	Application Discovery Service
+		Automated set of tools detects the application dependencies.
+	Database Migration Service
+		Migrate databases onprimises into amazon cloud databases.
+	Server Migration Service
+		Migrate virtual and physical servers into amazon cloud.
+	Snowball
+		Migrate large amount of data into amazon cloud.(Terabytes)
+
+Networking and Content Delivery:
+
+	VPC - Amazon Virtual Private Cloud
+		Virtual data centers, configure fire wall, route tables, etc.., complicated.
+	CloudFront
+		Amazon content delivery network. Media assets like video files, images files, 
+		if they are stored in london and you want to use them in austraila, what cloudfront does is can store it closer to australia on a edge node.
+	Route53
+		Amazon DNS Service, for example phone book. if we look up a name we get the phone number same way if DNS will respond with ip address when we put in a website name.
+	API gateway
+		Creating our own api for other services to talk to.
+	DirectConnect
+		Way of running a dedicated line from data center into amazon into VPC
+	
+Developer Tools:
+	
+	CodeStar
+		Group of developers working together quite easily, this is like project managing the code. 
+	CodeCommit
+		a way of place to store the code. its source control service. Can store the git projects on service.
+	CodeBuild
+		Runs unit tests and compile and produces deployables.
+	CodeDeploy
+		Deployement service to automated deployments to ec2 services, onprimse instances and lambda functions.
+	CodePipleine
+		Continuous delivery services.
+	X-Ray
+		Debug and analyse serverless applications.
+	Cloud9
+		IDE on web browser. 
+	
+Management Tools:
+	
+	CloudWatch
+		is a monitoring service for sys ops.
+	CloudFormaiton
+		is a way of scripting infrastructure.
+	CloudTrail
+		is used to log changes to AWS environment. By Default it is on.
+	Config
+		monitors the configuration of AWS environment. 
+	OpsWorks
+		uses both chef and puppet. way of automating env and configuration of env
+	Service Catalog
+		Manage a catalog of it services that are approved for use of AWS (Governence and complaince reqs)
+	Systems Manager
+		Interface for managing the AWS resources. 
+	Trusted Advisor
+		Will give you advise multiple disciples. if AWS services how much they are being used. 
+	ManagedServices
+		Will be used to manage EC2 instances etc..,
+
+Media Service:
+
+	Elastic Transcoder
+		Takes the video and resizes according to the deivces.
+	MediaConvert
+		File Based video transcoding serivce with broadcast features.
+	MediaLive
+		Broadcast grade live video processing service, creates high quality video for broadcast on tv, set top boxes etc..,
+	MediaPackage
+		Prepares and protects the media to broadcast over internet
+	MediaStore
+		Place to store the media, great performance, good consistency, optimize, load latency
+	MediaTailor
+		Allows for targeted advertise into video steams without sacrifisng the quality of media broadcast.
+
+Machine Learning:
+	
+	SageMaker
+		Makes it real easy for developers to use deep learning.
+	Comprehend
+		Sentiment analysis of the data, whether people are talking good or bad about products etc..,
+	DeepLens
+		Artifically aware camera. analyse what it is looking at.
+	Lex
+		way of communicating with customers. Alex uses this LEX.
+	Machine Learning
+		Different to deep learning. Deep learning is around nueral networks, whereas machine learning is to vary entry level, throw a data set into cloud and it will analyse the data set and determine whether or not any new data and predict an outcome. Amazon uses machine learning to throw recomendation of products.
+	Polly
+		Takes text and turns into speech. 
+	Rekognition
+		Does both video and images, when upload it tells what is in the image or video like a dog or car etc..,
+	Amazon Translate
+		Translate english into other languages
+	Amazon Transcribe
+		Sounds into Close captions.takes a video or mp3 files and turns recognises speech and turns into text.
+
+Analytics
+	
+	Athena
+		Allows to run sql queries on S3 buckets.
+	EMR - Elastic Map Reduce
+		Processing large amounts of data.
+	CloudSearch, Elastic Search Service	
+		Search services for AWS, used for cloud search via forum search.
+	Kinesis
+		Way of ingesting large amounts of data into AWS. Could be things like tweets, posts etc.., used for collating large amounts of data streamed from multiple sources.
+	Kinesis Video Sreams
+		Allows to ingest the video streams and run processes against it.
+	QuickSight
+		Amazon Business intellgent tool. 
+	Data Pipeline
+		Moving data between different AWS service. 
+	Glue
+		Used for ETL.
+	
+security & Identity & Compliance
+
+	IAM - identity access management
+	Cognito 
+		Device Authentication. like using facebook etc..,
+	GuardDuty
+		monitors for malacious activites
+	Inspector
+		Agent store in the virtual machines. Run to get reports of vulnerabilites.
+	Macie
+		Scan S3 buckets and looks for Personal Identification 
+	Certificate Manager
+		Way of Managing SSL certificates
+	CloudHSM-Hardware Security Modules
+		Dedicated bits of hardware used to store keys. use this keys to access services. 
+	Directory Service
+		a way of integrating Microsoft active director services with AWS services.
+	WAF - Web application Fireware
+		stop cross site scitping, sql injections. Looking at application layer or level. 
+	Shield
+		By deafult we get it for some AWS services. Prevents D-DOS attacks.
+	Artifact
+		Audit and compliance. portal of ondemand access to download AWS compliance reports.
+	
+Mobile Services
+	
+	Mobile Hub	
+		Management Console for mobile app. 
+	PinPoint
+		Push Notifications for pin point location etc..,
+	AWS AppSync
+		Updates the data in web and mobile applications. it does offline updates too.
+	Device Farm
+		way of testing apps on real life devices.
+	Mobile Analytics
+		analytics service for mobile.
+
+AR/VR (Agumented Reality/Virtual Reality)
+
+	Sumerian
+		first language written down. 
+		
+	Read book : Ready Play o one.
+	
+Application Integration
+	
+	Step Functions
+		Way of managing different Lambda functions
+	Amazon MQ
+		Way of doing mesasge Q's 
+	SNS - Notification Service
+			
+	SQS - Queue Service
+		
+	SWF - Simple Workflow service
+		creates a simple workflow service.
+
+Customer Engagement
+	
+	Connect 
+		call center in cloud, dynamic, natural and customer engagements in a scale.
+	Simple Email Service
+		sending large amounts of emails. 
+		
+Business Productivity
+	
+	Alexa for Business
+		use to connect meetings etc..,
+	Chime
+		like google hangout for business video conference rooms.
+	Work Docs
+		storing work related documents safely and securly.
+	Work Mail
+		like office365. using email thru amazon like google mail. 
+	
+Desktop & App Streaming
+
+	Workspaces
+		VDI solution, where we are running OS in AWS cloud.	
+	AppStream 2.0
+		Streaming the application. App is running in cloud but can be streamed.
+		
+Internet of things
+	
+	iOT - Internet of things. 
+		Way of thounds of devices sending back the data. could be video feeds etc..,
+	iOT Device Management 
+		Manage the Devices 
+	Amazon FreeRTOS
+		OS for micro controllers
+	Greengrass
+		Software that lets run local compute message, data caching, sync and machine learning interfaces for the connect devices in a secured way.
+	
+Game Development
+	
+	GameLift
+		a way to develop games. 
+		
+DONT FREAK OUT
+
+	SA Associate
+		AWS Gloval Infrastructure
+		Compute
+		Storage
+		Databases
+		Migration
+		Networking & Content Delivery
+		Management Tools
+		Analytics
+		Security & identity & Compliance
+		Applcaiton Integration
+		Desktop & App Streaming
+	
+	Developer Associate
+		AWS Gloval Infrastructure
+		Compute
+		Storage
+		Databases
+		Networking & Content Delivery
+		Management Tools
+		Analytics
+		Security & identity & Compliance
+		Applcaiton Integration
+	
+	Sysops Administrator Associate
+		AWS Gloval Infrastructure
+		Compute
+		Storage
+		Databases
+		Networking & Content Delivery
+		Management Tools
+		Security & identity & Compliance
+		Applcaiton Integration
+		
