@@ -313,3 +313,7 @@ DONT FREAK OUT
 		Applcaiton Integration
 		
 https://api.notifymyecho.com/v1/NotifyMe?notification=Hello%20World!&accessCode=amzn1.ask.account.AHMBZA6QRIEQPYVH3HQ5SS7OKAD46YJJEBWHHF64CKQGLU4562BLMERNS5LEMFZHOCE7HDE3OTA7XEHYPDRCZJUTFNWYEDYEXG62PK2J4Z3DPT3CFUI56EPU2H6ZOMDL5QE55H5CDRGYP5OBQAR72Y647VZPPTQSSV6JFU545WXKG4X6HJUAAIHPZ7NRGZQ2NV6CHPVWH4VYCSA
+
+Hi All, Welcome to DOJO innovation Demo.!!!
+
+I\'m speaking behalf off Claim Communication Team. Today we are going to demo, How Alexa can be helpful in part of claim communication for better experience by using Amazon Alexa Push Notification.... Guys, lets start the demo!!!
