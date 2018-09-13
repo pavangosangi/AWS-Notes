@@ -317,3 +317,8 @@ https://api.notifymyecho.com/v1/NotifyMe?notification=Hello%20World!&accessCode=
 Hi All, Welcome to DOJO innovation Demo.!!!
 
 I\'m speaking behalf off Claim Communication Team. Today we are going to demo, How Alexa can be helpful in part of claim communication for better experience by using Amazon Alexa Push Notification.... Guys, lets start the demo!!!
+
+Hi All….Welcome to the Claim Communication Team’s DOJO Innovation Day Demo.!!!         
+
+Today we will demonstrate how Alexa Push Notifications can enhance the customer experience with claim communications.  Come on guys…..let’s start the demo!!!
+
