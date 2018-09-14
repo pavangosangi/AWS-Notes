@@ -322,3 +322,4 @@ Hi All….Welcome to the Claim Communication Team’s DOJO Innovation Day Demo.!
 
 Today we will demonstrate how Alexa Push Notifications can enhance the customer experience with claim communications.  Come on guys…..let’s start the demo!!!
 
+You have received a notification from State Farm…….A “New Jersey Rental Letter” has been created and mailed to “Participant Name” for claim number XXXXXXXX.
